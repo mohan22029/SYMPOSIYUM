@@ -49,7 +49,7 @@ function Event() {
           onCanPlayThrough={() => setIsVideoLoaded(true)} // Set video loaded once it's playable
           poster={backgroundImage}
         >
-          <source src={backgroundVideoWebm} type="video/webm" />
+        
           <source src={backgroundVideoMp4} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
