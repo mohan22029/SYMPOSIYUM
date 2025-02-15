@@ -1,0 +1,283 @@
+/* 🎥 Fullscreen Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* 🔥 Overlay for Readability */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* 🔥 Header Styling */
+.event-header {
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffcc00, #ff5733);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 🔙 Back Button - Positioned Below Header */
+.back-button-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  margin-left: 5%;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 2px solid #ffcc00;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffcc00;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+
+.back-button:hover {
+  background: #ffcc00;
+  color: #240f6e;
+  transform: scale(1.1);
+}
+
+/* 📸 Event Content Layout */
+.event-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 📸 Event Poster Styling */
+.event-poster {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-left: 30px;
+}
+
+.event-poster:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 25px rgba(255, 204, 0, 0.5);
+}
+
+/* ✨ Event Info Container */
+.event-info {
+  width: 90%;
+  max-width: 450px;
+  background: linear-gradient(135deg, rgba(20, 30, 48, 0.9), rgba(36, 15, 110, 0.8));
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 204, 0, 0.5);
+  box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.3);
+  animation: slideIn 1s ease-in-out;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 20px;
+  margin-left: 30px;
+ 
+}
+
+.event-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(255, 204, 0, 0.6);
+}
+
+/* 🎨 Event Title */
+.event-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffcc00, #ff5733);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 📜 Event Description */
+.event-description {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
+}
+
+.event-description:hover {
+  color: #ffcc00;
+}
+
+/* 🎟 Register Button */
+.register-button {
+  background: linear-gradient(135deg, #ff5733, #cc4400);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px rgba(255, 87, 51, 0.5);
+}
+
+.register-button:hover {
+  background: linear-gradient(135deg, #cc4400, #ffcc00);
+  transform: scale(1.1);
+  box-shadow: 0px 6px 15px rgba(255, 87, 51, 0.8);
+}
+
+/* 🌟 Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* 🔄 Responsive Styles */
+@media (max-width: 1024px) {
+  .event-content {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+  }
+  
+  .event-header {
+      font-size: 1.8rem;
+  }
+
+  .event-title {
+      font-size: 1.5rem;
+  }
+
+  .event-info {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .event-poster {
+      width: 100%;
+      max-width: 400px;
+  }
+
+  .register-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-header {
+      font-size: 1.5rem;
+  }
+
+  .back-button-container {
+      justify-content: center;
+      margin-left: 0;
+  }
+
+  .event-title {
+      font-size: 1.4rem;
+  }
+
+  .event-content {
+      padding: 20px;
+  }
+
+  .event-poster {
+      max-width: 350px;
+      
+  }
+
+  .event-info {
+      max-width: 350px;
+  }
+
+  .register-button {
+      font-size: 0.9rem;
+      padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-header {
+      font-size: 1.2rem;
+      padding: 15px;
+  }
+
+  .event-title {
+      font-size: 1.2rem;
+  }
+
+  .event-content {
+      padding: 15px;
+  }
+
+  .event-poster {
+      max-width: 300px;
+  }
+
+  .event-info {
+      max-width: 300px;
+      padding: 10px;
+  }
+
+  .register-button {
+      font-size: 0.8rem;
+      padding: 6px 15px;
+  }
+}

@@ -1,0 +1,324 @@
+/* 🖤 Fix White Flash - Set Background to Black */
+.html,body {
+  background-color: #000; 
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0; /* Ensure background remains black */
+  
+  
+}
+
+/* 🎥 Fullscreen Background Video Wrapper */
+.background-video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  backdrop-filter: blur(5px);
+  background: #000; /* Fallback color while video loads */
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+
+/* Initially hidden to prevent white flash */
+.hidden {
+  opacity: 0;
+  background: #000; /* Ensure black background while loading */
+}
+
+/* Smooth fade-in when video is ready */
+.fade-in {
+  opacity: 1;
+}
+
+/* 🎥 Background Video */
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%); /* Slightly darken for readability */
+}
+
+
+:root {
+  --dark-blue-gradient: linear-gradient(to right, #141e30, #243b55);
+  --dark-gray-gradient: linear-gradient(to right, #222, #444);
+  --charcoal-gradient: linear-gradient(to right, #1a1a1a, #333);
+  --yellow-gold: #ffcc00;
+  --orange-red: #ff5733;
+  --white: #ffffff;
+  --light-gray: #ddd;
+}
+
+/* Page Background */
+.page-event-page {
+  
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Header */
+.page-event-header {
+  background-color: var(--dark-blue-gradient);
+  height: 30px;
+  width: 100%;
+}
+
+/* Title Box */
+.page-event-title-box {
+  background: var(--charcoal-gradient);
+  color: var(--yellow-gold);
+  font-size: 10px;
+  font-weight: bold;
+  padding: 10px 50px;
+  border-left: 6px solid var(--orange-red);
+  width: fit-content;
+  margin: 50px 0 20px 50px;
+  margin-top: 95px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/*  
+.page-event-wrapper {
+  background: var(--dark-gray-gradient);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 0 auto;
+  width: 85%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease-in-out;
+}
+*/
+.page-event-wrapper {
+  width: 1200px;
+  margin: 25px 50px;
+  padding: 30px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for depth */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Reduced gap */
+  transition: all 0.3s ease-in-out;
+  margin-top: 0px;
+}
+
+/* Hover Effect: Slight Lift */
+.page-event-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Event Grid */
+.page-event-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px; /* Adjusted for better fit */
+  justify-items: center;
+}
+
+/* Event Card */
+.page-event-card {
+  background: var(--charcoal-gradient);
+  border-radius: 14px;
+  overflow: hidden;
+  width: 280px;
+  height: 280px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+}
+
+/* Image Container */
+.page-event-image-container {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.page-event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--charcoal-gradient);
+  padding: 14px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 18px;
+  border-top: 2px solid var(--yellow-gold);
+}
+
+/* Hover Effects */
+.page-event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+}
+
+/* Entrance Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInDown 1s ease-in-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-event-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .page-event-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.page-event-title-text, .page-event-arrow {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.page-event-title-text:hover, .page-event-arrow:hover {
+  color: var(--yellow-gold);
+}
+
+.page-event-card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.page-event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.6); /* Highlight effect */
+}
+.page-event-card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #222, #444); /* Dark gray gradient */
+  padding: 15px;
+}
+
+.page-event-card:hover {
+  transform: translateY(-10px); /* Lifts up smoothly */
+  box-shadow: 0 10px 20px rgba(255, 204, 0, 0.4); /* Golden glow */
+}
+
+.page-event-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.page-event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.page-event-card:hover .page-event-image {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.page-event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  color: white;
+}
+
+.page-event-title-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00; /* Gold color */
+}
+
+.page-event-arrow {
+  font-size: 24px;
+  color: #ff5733; /* Orange-Red */
+  transition: transform 0.3s ease-in-out;
+}
+
+.page-event-card:hover .page-event-arrow {
+  transform: translateX(5px); /* Arrow moves right on hover */
+}
+
+.event-box {
+  background: rgba(255, 255, 255, 0.1); /* Transparent blur effect */
+  backdrop-filter: blur(10px); /* Adds blur effect */
+  border-radius: 10px; 
+  padding: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.page-event-card:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 10px 20px rgba(96, 221, 100, 0.878); /* Add a subtle glow effect */
+  cursor: pointer;
+}
+/* Background Video */
+/* Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Behind all content */
+}
+
+/* Dark Overlay to Reduce Brightness */
+.about-container::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.0); /* Adjust opacity for brightness control */
+  z-index: -1; /* Keep it behind the content */
+}

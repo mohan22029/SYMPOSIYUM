@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding-top: 60px; /* Adjust based on header height */
+  }
+  
+  .content{
+    background-color: #fff;
+    color: black;
+  
+  }
+  
+  .Hospitality{
+    background-color: #fff;
+    color: black;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  

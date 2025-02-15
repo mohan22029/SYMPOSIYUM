@@ -1,0 +1,109 @@
+
+
+
+
+.contact-page {
+    background: linear-gradient(180deg, #1b1b32 10%, #222240 90%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 135px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+    color: #fff;
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 52px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1.5s ease-in-out;
+  }
+  
+  /* Coordinator List */
+  .coordinator-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Coordinator Cards */
+  .coordinator-card {
+    background: rgba(30, 30, 50, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+    width: 280px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .coordinator-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.6);
+  }
+  
+  /* Card Text Styling */
+  .coordinator-card h3 {
+    font-size: 22px;
+    color: #ffa500;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .coordinator-card p {
+    font-size: 14px;
+    color: #ddd;
+  }
+  
+  .coordinator-card a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .coordinator-card a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+ 
+  
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
