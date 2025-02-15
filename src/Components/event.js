@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./event.css";
 import backgroundVideoMp4 from "../Assets/event.mp4";
-import backgroundVideoWebm from "../Assets/event.webm";
 import backgroundImage from "../Assets/b.jpg"; // Lightweight placeholder image
 
 import bugBashImage from "../Assets/bugbash.jpg";
