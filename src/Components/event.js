@@ -23,7 +23,6 @@ const events = [
 function Event() {
   const navigate = useNavigate();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
   useEffect(() => {
     window.scrollTo(0, 0); // Ensure page starts at the top
 
