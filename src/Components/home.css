@@ -197,7 +197,7 @@ section.visible {
 .countdown {
   margin-top: 20px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 0.4rem;
   color: white;
   animation: fadeIn 2s ease-in-out;
   display: flex;
