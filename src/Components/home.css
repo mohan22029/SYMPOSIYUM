@@ -1276,7 +1276,6 @@ html {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  backdrop-filter: blur(5px);
   background: #000; /* Fallback color while video loads */
   transition: opacity 1s ease-in-out;
 }
