@@ -1,4 +1,5 @@
 import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./event1.css"; 
 import eventImage from "../Assets/event2.jpg";
@@ -7,6 +8,9 @@ import { FaArrowLeft } from "react-icons/fa";
 
 function Event1() {
   const navigate = useNavigate();
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0); 
 
   return (
     <div className="page-container">
