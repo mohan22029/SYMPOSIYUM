@@ -164,3 +164,27 @@
 .nav.scrolled {
   background-color: #140c1b;
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .logo-container {
+    margin-left: 0; /* Align logo to the left edge */
+    position: absolute;
+    left: 1rem;
+    top: 120%;
+    transform: translateY(-50%);
+  }
+
+  .logo {
+    height: 60px; /* Adjust size for mobile */
+  }
+
+  .menu-icon {
+    right: 1rem; 
+    top:120%/* Ensure menu icon stays on the right */
+  }
+
+  .nav {
+    padding: 0.8rem; /* Reduce padding for better fit */
+  }
+}
