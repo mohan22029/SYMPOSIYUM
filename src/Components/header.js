@@ -32,9 +32,11 @@ const Header = () => {
       }`}
     >
       <div className={`nav ${isScrolled ? "scrolled" : ""}`}>
-        <div className="logo-container">
-          <img src={logo3} alt="Logo" className="logo left-logo" />
-        </div>
+      <div className="logo-container">
+  <Link to="/home" onClick={() => setIsMenuOpen(false)}>
+    <img src={logo3} alt="Logo" className="logo left-logo" />
+  </Link>
+</div>
 
         {/* Mobile Menu Icon */}
         <div className="menu-icon" onClick={toggleMenu}>
