@@ -9,7 +9,7 @@ const Contact = () => {
     window.scrollTo(0, 0); // Scroll to top when component is mounted
   }, []);
   const eventStaffCoordinators = [
-    { name: "Dr G. Manikandan", email: "john.doe@ourspark.com", phone: "+123 456 7890" }
+    { name: "Dr. G. Manikandan M.E., Ph.D.", email: "gmk.ad@rmkec.ac.in", phone: "+91 9444749744" }
   
   ];
 
