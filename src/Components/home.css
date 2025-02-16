@@ -213,6 +213,7 @@ section.visible {
   border: 2px solid rgba(12, 217, 236, 0.S6);
   position: relative;
   overflow: hidden;
+  margin-left: -10px;
 }
 
 /* Adding an animated grid effect */
