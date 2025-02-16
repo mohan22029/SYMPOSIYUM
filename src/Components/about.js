@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";  // Import useNavigate
 import { FaUsers, FaTrophy, FaChalkboardTeacher, FaBus, FaUtensils, FaTicketAlt } from "react-icons/fa";
 import "./about.css";
 import Aboutvedio from "../Assets/about2.mp4";
@@ -7,10 +8,11 @@ import Aboutvedio from "../Assets/about2.mp4";
 const About = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     setIsPageLoaded(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });  // ✅ Always start at top
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   const handleVideoLoad = () => {
@@ -55,64 +57,6 @@ const About = () => {
         </motion.div>
       )}
 
-      {/* Why Attend Section */}
-      {isPageLoaded && (
-        <motion.div
-          className="about-section"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="section-title">Why Attend? 🤩</h2>
-          <div className="box-container">
-            <motion.div className="about-box" whileHover={{ scale: 1.05 }}>
-              <FaUsers className="icon" />
-              <h3>🔗 Network & Collaborate</h3>
-              <p>Meet AI experts, researchers, and tech enthusiasts.</p>
-            </motion.div>
-            <motion.div className="about-box" whileHover={{ scale: 1.05 }}>
-              <FaChalkboardTeacher className="icon" />
-              <h3>📚 Learn & Explore</h3>
-              <p>Workshops, lectures, and hands-on coding sessions.</p>
-            </motion.div>
-            <motion.div className="about-box" whileHover={{ scale: 1.05 }}>
-              <FaTrophy className="icon" />
-              <h3>🏆 Exciting Prizes</h3>
-              <p>Showcase your skills and win amazing rewards!</p>
-            </motion.div>
-          </div>
-        </motion.div>
-      )}
-
-      {/* Special Perks Section */}
-      {isPageLoaded && (
-        <motion.div
-          className="about-section"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="section-title">🔥 Special Perks Just for You!</h2>
-          <div className="box-container">
-            <motion.div className="about-box special-box" whileHover={{ scale: 1.05 }}>
-              <FaTicketAlt className="icon" />
-              <h3>🎫 Free Registration</h3>
-              <p>No registration fee to participate!</p>
-            </motion.div>
-            <motion.div className="about-box special-box" whileHover={{ scale: 1.05 }}>
-              <FaUtensils className="icon" />
-              <h3>🍔 Free Food</h3>
-              <p>Enjoy delicious meals throughout the event.</p>
-            </motion.div>
-            <motion.div className="about-box special-box" whileHover={{ scale: 1.05 }}>
-              <FaBus className="icon" />
-              <h3>🚌 Free Transport</h3>
-              <p>We provide bus services for a comfortable journey.</p>
-            </motion.div>
-          </div>
-        </motion.div>
-      )}
-
       {/* Call to Action */}
       {isPageLoaded && (
         <motion.div
@@ -122,7 +66,13 @@ const About = () => {
           transition={{ duration: 1 }}
         >
           <p>🚀 Don't miss out on the ultimate AI experience! 🚀</p>
-          <motion.button className="about-register-btn" whileHover={{ scale: 1.1 }}>Register Now</motion.button>
+          <motion.button 
+            className="about-register-btn" 
+            whileHover={{ scale: 1.1 }}
+            onClick={() => navigate("/event")} // Navigate to events page
+          >
+            Register Now
+          </motion.button>
         </motion.div>
       )}
     </div>
