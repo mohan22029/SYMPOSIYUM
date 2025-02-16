@@ -1,14 +1,4 @@
-.title {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  /* Add fallback for clamp compatibility */
-  font-size: min(max(2.5rem, 8vw), 4.5rem);
-}
 
-.subtitle {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  /* Add fallback */
-  font-size: min(max(1rem, 3vw), 1.5rem);
-}
 
 /* Add font-face declaration for Libre Baskerville */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
@@ -93,10 +83,11 @@ section.visible {
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better readability */
-  padding: 1rem;
+  padding: 3rem;
   overflow: hidden;
-  backdrop-filter: blur(2px);
+  top: 20px;
 }
+
 
 /* Glitch Effect */
 .glitch {
@@ -174,7 +165,7 @@ section.visible {
 .title {
   font-family: Libre Baskerville, serif;
   position: relative;
-  font-size: 3.5rem; 
+  font-size: 2rem; 
   line-height: 1.1;
   margin-bottom: 1rem;
   text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
@@ -184,9 +175,9 @@ section.visible {
   text-transform: uppercase;
   white-space: nowrap;
   animation: glitch 1.5s infinite;
-  @media (max-width: 1200px) { font-size: 3rem; }
-  @media (max-width: 768px) { font-size: 2.5rem; }
-  @media (max-width: 480px) { font-size: 2rem; }
+  @media (max-width: 1200px) { font-size: 2rem; }
+  @media (max-width: 768px) { font-size: 1.5rem; }
+  @media (max-width: 480px) { font-size: 1rem; }
 }
 
 .subtitle {
@@ -198,23 +189,10 @@ section.visible {
   margin-bottom: 5px;
   text-transform: uppercase;
   white-space: nowrap;
-  @media (max-width: 768px) { font-size: 1.25rem; }
-  @media (max-width: 480px) { font-size: 1rem; }
-}
-.title {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+  @media (max-width: 768px) { font-size: 1.rem; }
+  @media (max-width: 480px) { font-size: 0.9rem; }
 }
 
-.subtitle {
-  font-size: clamp(1rem, 3vw, 1.5rem); /* Smaller for subtitle */
-  font-weight: 300;
-  margin: 0 auto 2rem;
-  
-  /* Stagger animation duration */
-}
 
 .countdown {
   margin-top: 20px;
@@ -316,7 +294,7 @@ section.visible {
   /* Ensure parent container isn't cutting off content */
   .home {
     overflow: visible;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -1018,12 +996,12 @@ html {
 /* Add responsive styles for smaller screens */
 @media (max-width: 768px) {
   section {
-    padding: 1rem;
+    padding: 0.5rem;
     min-height: auto;
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     white-space: normal;
   }
 
@@ -1182,7 +1160,7 @@ html {
 /* Home Section Responsive Styles */
 @media screen and (max-width: 1200px) {
   .title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   
   .subtitle {
@@ -1192,18 +1170,17 @@ html {
 
 @media screen and (max-width: 768px) {
   .home {
-    padding: 15px;
+    padding: 1px;
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     white-space: normal; /* Allow text to wrap */
   }
 
   .subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     white-space: normal;
-    padding: 0 10px;
   }
 
   .countdown {
@@ -1228,7 +1205,7 @@ html {
 
 @media screen and (max-width: 480px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .subtitle {
@@ -1302,9 +1279,13 @@ html {
   background: #000; /* Fallback color while video loads */
   transition: opacity 1s ease-in-out;
 }
+
 @media (max-width: 768px) {
-  .title,.subtitle{
-    font-size: 0rem;
+  .title{
+    font-size: 1.5rem;
+  }
+  .subtitle{
+    font-size: 1rem;
   }
   .countdown {
     width: 90%;
@@ -1324,5 +1305,74 @@ html {
   .animated-button .text {
     font-size: 10px;
     white-space: nowrap;
+  }
+}
+
+
+/* Add these media queries at the end of your CSS */
+
+/* For screens below 480px */
+@media (max-width: 480px) {
+  .title {
+    white-space: normal;
+    font-size: 2rem !important;
+    line-height: 1.3;
+    padding: 0 15px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    white-space: normal;
+    font-size: 1rem !important;
+    padding: 0 15px;
+    line-height: 1.4;
+  }
+  
+  .home {
+    padding: 1rem;
+    top: 0;
+  }
+}
+
+/* For very small screens below 400px */
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.2rem !important;
+    padding: 0 10px;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem !important;
+    padding: 0 10px;
+  }
+  
+  .countdown {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .time span {
+    padding: 0.4rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* For extreme small screens below 350px */
+@media (max-width: 350px) {
+  .title {
+    font-size: 1rem !important;
+  }
+  
+  .subtitle {
+    font-size: 0.8rem !important;
+  }
+  
+  .time {
+    gap: 3px;
+  }
+  
+  .time span {
+    padding: 0.3rem;
+    font-size: 1rem;
   }
 }
