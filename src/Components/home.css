@@ -1,3 +1,23 @@
+.title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  /* Add fallback for clamp compatibility */
+  font-size: min(max(2.5rem, 8vw), 4.5rem);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  /* Add fallback */
+  font-size: min(max(1rem, 3vw), 1.5rem);
+}
+
+/* Add font-face declaration for Libre Baskerville */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+html {
+  font-size: 16px; /* Base font size lock */
+  scroll-behavior: smooth;
+}
+
 .App {
   position: relative;
   overflow-x: hidden;
@@ -154,24 +174,32 @@ section.visible {
 .title {
   font-family: Libre Baskerville, serif;
   position: relative;
-  font-size: 4rem; 
+  font-size: 3.5rem; 
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
   color: rgb(241, 131, 12);/* Larger size for the title */
   font-weight: bold;
   margin-bottom: 5px;
   text-transform: uppercase;
   white-space: nowrap;
   animation: glitch 1.5s infinite;
+  @media (max-width: 1200px) { font-size: 3rem; }
+  @media (max-width: 768px) { font-size: 2.5rem; }
+  @media (max-width: 480px) { font-size: 2rem; }
 }
+
 .subtitle {
   font-family: Libre Baskerville, serif;
   position: relative;
-  font-size: 4rem; 
+  font-size: 1.5rem; 
   color: rgb(4, 42, 156);/* Larger size for the title */
   font-weight: bold;
   margin-bottom: 5px;
   text-transform: uppercase;
   white-space: nowrap;
- 
+  @media (max-width: 768px) { font-size: 1.25rem; }
+  @media (max-width: 480px) { font-size: 1rem; }
 }
 .title {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -267,6 +295,29 @@ section.visible {
 
 .countdown .fa-calendar {
   color: #f39c12;
+}
+
+.animated-button {
+  /* Add mobile-friendly positioning */
+  position: relative;
+  z-index: 9999; /* Ensure button stays on top */
+  margin: 1rem auto; /* Center button */
+  display: inline-block; /* Maintain proper button sizing */
+}
+
+/* Add mobile-specific media query */
+@media (max-width: 480px) {
+  .animated-button {
+    padding: 12px 24px;
+    font-size: 14px;
+    margin-top: 1.5rem; /* Add spacing from countdown */
+  }
+  
+  /* Ensure parent container isn't cutting off content */
+  .home {
+    overflow: visible;
+    padding-bottom: 2rem;
+  }
 }
 
 /* From Uiverse.io by ryota1231 */ 
@@ -1250,4 +1301,28 @@ html {
   backdrop-filter: blur(5px);
   background: #000; /* Fallback color while video loads */
   transition: opacity 1s ease-in-out;
+}
+@media (max-width: 768px) {
+  .title,.subtitle{
+    font-size: 0rem;
+  }
+  .countdown {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  
+  .time {
+    gap: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .time span {
+    padding: 0.5rem;
+  }
+  
+  /* Ensure button text remains visible */
+  .animated-button .text {
+    font-size: 10px;
+    white-space: nowrap;
+  }
 }
