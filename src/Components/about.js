@@ -8,6 +8,7 @@ import Aboutvedio from "../Assets/about2.mp4";
 const About = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsPageLoaded(true);
@@ -123,18 +124,17 @@ const About = () => {
           transition={{ duration: 1 }}
         >
           <p>🚀 Don't miss out on the ultimate AI experience! 🚀</p>
-         <motion.button 
+          <motion.button 
             className="about-register-btn" 
             whileHover={{ scale: 1.1 }}
-            onClick={() => navigate("/event")} // Navigate to events page
+            onClick={() => navigate("/event")}  // ✅ Navigate to Event Page
           >
             Register Now
-          </motion.button>  
+          </motion.button>
+        </motion.div>
       )}
     </div>
   );
 };
 
 export default About;
-
-navigate the registre button to event page
