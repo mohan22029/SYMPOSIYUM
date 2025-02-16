@@ -14,11 +14,11 @@ const Contact = () => {
   ];
 
   const studentCoordinators = [
-    { name: "Aravindh M", email: "arjithrock@ourspark.com", phone: "+123 456 7789" },
-    { name: "Rohit Sudarsen G", email: "arjun.mitra@ourspark.com", phone: "+987 654 3210" },
-    { name: "Kaviarasu S", email: "nika.prince@ourspark.com", phone: "+456 779 0123" },
-    { name: "Lekhashree A", email: "andy.davis@ourspark.com", phone: "+321 654 0987" },
-    { name: "Sri Siva Swathika S T", email: "anna.brown@ourspark.com", phone: "+111 222 3333" },
+    { name: "Aravindh M", email: "arav22001.ad@rmkec.ac.in", phone: "+91 9361118410" },
+    { name: "Rohit Sudarsen G", email: "groh22013.ad@rmkec.ac.in", phone: "+91 9176012600" },
+    { name: "Kaviyarasu S", email: "kavi22022.ad@rmkec.ac.in", phone: "+91 9360670658" },
+    { name: "Lekhashree A", email: "lekh22026.ad@rmkec.ac.in", phone: "+91 6382535923" },
+    { name: "Sri Siva Swathika S T", email: "sris22052.ad@rmkec.ac.in", phone: "+91 7418676790 " },
   ];
   const websiteDevelopers = [
     { name: "Mohan Raj M A", email: "mohan2020.a@rmkec.ac.in", linkedin: "https://linkedin.com/in/mohan-raj" },
