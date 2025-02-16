@@ -8,8 +8,10 @@ import { FaArrowLeft } from "react-icons/fa";
 function Event1() {
  const navigate = useNavigate();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="page-container">
