@@ -36,7 +36,7 @@ const Footer = () => {
 
             <div className="col-span-3">
               <h2>Contact Us</h2>
-              <p><i className="fa-solid fa-location-dot"></i> RMK Engineering College, Kavaraipettai, Gummudipoondi, Tamil Nadu, 601206</p>
+              <p><i className="fa-solid fa-location-dot"></i> R.M.K. Engineering College, Kavaraipettai, Gummudipoondi, Tamil Nadu, 601206</p>
               <p><i className="fa-solid fa-envelope"></i> aidynamica@rmkec.ac.in</p>
               <p><i className="fa-solid fa-phone-volume"></i> +91 93611 18410 </p>   
             </div>
