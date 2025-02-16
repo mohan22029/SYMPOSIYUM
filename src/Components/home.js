@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './home.css';
+import { useNavigate } from 'react-router-dom'; 
 import videoBg from './../Assets/bg.mp4';
 
 import vission from "./../Assets/vision-image.jpg";
@@ -17,6 +18,7 @@ import surpriseEventImage from './../Assets/supriseevent.jpg';
 //import Footer from './footer';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   //const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [showDirections, setShowDirections] = useState(false);
@@ -99,36 +101,42 @@ const Home = () => {
 
   const cardData = [
     {
+      id: '1',
       title: 'Idea Ignite',
       description: 'Spark Ideas, Present Brilliance!',
       backText: ' Idea Ignite is not just a paper presentation competition.',
       image: ideaIgniteImage,
     },
     {
+      id: '2',
       title: 'Mind Maze',
       description: 'Crack the Code, Conquer Logic!',
       backText: 'Mind Maze is designed to test your problem-solving skills and strategic thinking.',
       image: mindMazeImage,
     },
     {
+      id: '3',
       title: 'Bug Bash',
       description: 'Debug, Fix, Dominate!',
       backText: 'Buck Bash is an electrifying level coding challenge designed to push your problem-solving abilities to the limit',
       image: bugBashImage, // Unique image for this card
     },
     {
+      id: '4',
       title: 'Pitch Perfect',
       description: 'Innovate, Impress, Revolutionize!',
       backText: 'Every great idea starts with a spark can you turn yours into a revolution!',
       image: pitchPerfectImage,
     },
     {
+      id: '5',
       title: 'Mystery Bucks Battle (Non-Tech)',
       description: 'Compete, Earn, Bid, Win Big!',
       backText: 'An interactive event where participants will face unexpected challenges, earn virtual money, and bid for exciting mystery rewards.',
       image: mbbImage,
     },
     {
+      id: '6',
       title: 'Surprise Event',
       description: 'Expect the Unexpected!',
       backText: 'Discover the surprise!',
@@ -252,7 +260,10 @@ const Home = () => {
             </button>
             <div className="card-container" ref={eventsContainerRef}>
               {cardData.map((card, index) => (
-                <div className="card" key={index}>
+                <div 
+                className="card"
+                 key={index}
+                 onClick={() => navigate(`/event/${card.id}`)}>
                   <div className="card-inner">
                     {/* Front Side */}
                     <div className="card-front">
@@ -293,7 +304,7 @@ const Home = () => {
                 <li>Participants must only use the college bus which will be available on March 17th.</li>
               </ul>
               <div className="bus-routes-link">
-                <a href="" className="route-btn">Bus Routes</a>
+                <a href="/hospitality" className="route-btn">Bus Routes</a>
               </div>
             </div>
           </div>
