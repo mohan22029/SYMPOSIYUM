@@ -197,7 +197,7 @@ section.visible {
 .countdown {
   margin-top: 20px;
   text-align: center;
-  font-size: 0.0rem;
+  font-size: 0.rem;
   color: white;
   animation: fadeIn 2s ease-in-out;
   display: flex;
@@ -214,6 +214,7 @@ section.visible {
   position: relative;
   overflow: hidden;
   margin-left: -10px;
+  margin-top:10px;
 }
 
 /* Adding an animated grid effect */
