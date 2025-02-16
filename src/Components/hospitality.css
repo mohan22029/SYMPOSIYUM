@@ -149,44 +149,136 @@ body::before {
 }
 
 /* Responsive Design */
+@media (min-width: 1441px) {
+  .ho-title {
+    font-size: 3rem;
+  }
+  .ho-description {
+    font-size: 1.4rem;
+  }
+  .ho-combined-container {
+    max-width: 1400px;
+  }
+  .ho-bus-route,
+  .ho-map-container {
+    flex: 1 1 400px;
+    padding: 50px;
+  }
+  .ho-bus-instructions {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .ho-title {
+    font-size: 2.5rem;
+  }
+  .ho-combined-container {
+    max-width: 1200px;
+  }
+  .ho-bus-route,
+  .ho-map-container {
+    flex: 1 1 350px;
+    padding: 40px;
+  }
+}
+
 @media (max-width: 1024px) {
   .ho-hospitality-container {
     padding: 6vh 4vw;
   }
+  .ho-title {
+    font-size: 2.2rem;
+  }
   .ho-combined-container {
-    flex-direction: column;
-    padding: 4%;
+    width: 95%;
+    padding: 20px;
+    gap: 20px;
   }
   .ho-bus-route,
   .ho-map-container {
-    width: 100%;
-    padding: 30px;
+    flex: 1 1 100%;
+    padding: 25px;
+  }
+  .ho-map-container iframe {
+    height: 300px;
   }
 }
 
 @media (max-width: 768px) {
+  .ho-hospitality-container {
+    padding: 4vh 3vw;
+  }
   .ho-title {
     font-size: 2rem;
+    margin-bottom: 15px;
   }
   .ho-description {
     font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .ho-combined-container {
+    width: 100%;
+    padding: 15px;
+    gap: 15px;
   }
   .ho-bus-route,
   .ho-map-container {
     padding: 20px;
   }
+  .ho-bus-instructions {
+    font-size: 0.95rem;
+  }
+  .ho-map-container iframe {
+    height: 250px;
+  }
 }
 
 @media (max-width: 480px) {
+  .ho-hospitality-container {
+    padding: 3vh 2vw;
+  }
   .ho-title {
     font-size: 1.8rem;
   }
   .ho-description {
     font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  .ho-combined-container {
+    padding: 10px;
+    gap: 10px;
+  }
+  .ho-bus-route,
+  .ho-map-container {
+    padding: 15px;
+  }
+  .ho-bus-instructions {
+    font-size: 0.9rem;
+  }
+  .ho-map-container iframe {
+    height: 200px;
   }
   .ho-bus-btn,
   .ho-directions-btn {
     font-size: 14px;
     padding: 8px 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .ho-title {
+    font-size: 1.5rem;
+  }
+  .ho-description {
+    font-size: 0.85rem;
+  }
+  .ho-bus-instructions {
+    font-size: 0.85rem;
+  }
+  .ho-bus-btn,
+  .ho-directions-btn {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }
