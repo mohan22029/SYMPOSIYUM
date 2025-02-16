@@ -197,20 +197,20 @@ section.visible {
 .countdown {
   margin-top: 20px;
   text-align: center;
-  font-size: 0.4rem;
+  font-size: 0.0rem;
   color: white;
   animation: fadeIn 2s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
   margin: 2rem 0;
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: 1rem;
+  border-radius: 10px;
   background: rgba(7, 89, 97, 0.647);
   backdrop-filter: blur(5px) contrast(1.2);
   box-shadow: 0 0 15px rgba(7, 247, 219, 0.853);
-  border: 2px solid rgba(12, 217, 236, 0.S6);
+  border: 1px solid rgba(12, 217, 236, 0.S6);
   position: relative;
   overflow: hidden;
   margin-left: -10px;
