@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './home.css';
 import { useNavigate } from 'react-router-dom'; 
 import videoBg from './../Assets/bg.mp4';
+import ImageBackground from './../Assets/placeholder-image.png'
 
 import vission from "./../Assets/vision-image.jpg";
 import mission from "./../Assets/mission-image.jpg";
@@ -172,7 +173,18 @@ const Home = () => {
       {/* Video Background */}
       
       <div className="video-background">
-        <video autoPlay loop muted preload="auto">
+        <video 
+
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          preload="auto" 
+          className="video-background"
+        // Set video loaded once it's playable
+          poster={ImageBackground}
+
+>
           <source src={videoBg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

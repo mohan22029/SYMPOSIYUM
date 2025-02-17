@@ -22,22 +22,11 @@ const events = [
 
 function Event() {
   const navigate = useNavigate();
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  useEffect(() => {
-    window.scrollTo(0, 0); // Ensure page starts at the top
-
-    // Simulate a slight delay for smooth animation
-    const videoLoadTimer = setTimeout(() => {
-      setIsVideoLoaded(true);
-    }, 1000); // Delay for 1 second to prevent flickering
-
-    return () => clearTimeout(videoLoadTimer);
-  }, []);
-
+  
   return (
     <div className="page-event-page">
       {/* Background Video with Smooth Fade-In Effect */}
-      <div className={`background-video-wrapper ${isVideoLoaded ? "fade-in" : "hidden"}`}>
+      
         <video 
           autoPlay 
           loop 
@@ -45,14 +34,14 @@ function Event() {
           playsInline 
           preload="auto" 
           className="background-video"
-          onCanPlayThrough={() => setIsVideoLoaded(true)} // Set video loaded once it's playable
+        // Set video loaded once it's playable
           poster={backgroundImage}
         >
         
           <source src={backgroundVideoMp4} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
+     
 
       {/* Header */}
       <header className="page-event-header"></header>

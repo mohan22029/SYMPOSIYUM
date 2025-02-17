@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaUsers, FaTrophy, FaChalkboardTeacher, FaBus, FaUtensils, FaTicketAlt } from "react-icons/fa";
 import "./about.css";
 import Aboutvedio from "../Assets/about2.mp4";
+import eventImage from "../Assets/placeabout.png"
 
 const About = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -27,10 +28,16 @@ const About = () => {
           autoPlay
           loop
           muted
+          playsInline 
           className="background-video"
           preload="auto"
           onCanPlayThrough={handleVideoLoad} 
+          poster={eventImage}
+          
         >
+
+
+
           <source src={Aboutvedio} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
