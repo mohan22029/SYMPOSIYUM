@@ -21,7 +21,14 @@ const events = [
 ];
 
 function Event() {
-  const navigate = useNavigate();
+   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+    const [isPageLoaded, setIsPageLoaded] = useState(false);
+    const navigate = useNavigate();
+  
+    useEffect(() => {
+      setIsPageLoaded(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });  // ✅ Always start at top
+    }, []);
   
   return (
     <div className="page-event-page">
