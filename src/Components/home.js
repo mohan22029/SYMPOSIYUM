@@ -172,7 +172,7 @@ const Home = () => {
       {/* Video Background */}
       
       <div className="video-background">
-        <video autoPlay loop muted>
+        <video autoPlay loop muted preload="auto">
           <source src={videoBg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
