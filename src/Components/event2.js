@@ -41,7 +41,7 @@ function Event1() {
         <div className="event-info">
           <h1 className="event-title">MIND MAZE</h1>
           <ul className="event-description">
-            <li>📌 Date: 20th February 2025</li>
+  
             <li>📌 Time: 10:00 AM - 5:00 PM</li>
             <li>📌 Venue: RMK Engineering College</li>
             <li>📌 Topics: AI, Blockchain, and Cybersecurity</li>

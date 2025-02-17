@@ -6,7 +6,7 @@ const Loader = () => {
     <StyledWrapper>
       <div className="hacker-loader">
         <div className="loader-text">
-          <span data-text="Initializing..." className="text-glitch">Checking if you’re a robot... Beep Boop! 🤖...</span>
+          <span data-text="Initializing..." className="text-glitch">Checking if you’re a robot!.... 🤖</span>
         </div>
         <div className="loader-bar">
           <div className="bar-fill" />
