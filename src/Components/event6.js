@@ -42,11 +42,11 @@ function Event1() {
         <div className="event-info">
           <h1 className="event-title">SURPRISE EVENT</h1>
           <ul className="event-description">
-            <li>📌 Date: 20th February 2025</li>
-            <li>📌 Time: 10:00 AM - 5:00 PM</li>
-            <li>📌 Venue: RMK Engineering College</li>
-            <li>📌 Topics: AI, Blockchain, and Cybersecurity</li>
-            <li>📌 Special Guest: Industry Experts & Keynote Speakers</li>
+           
+            <li>📌 Time: 11:00 AM - 12:00 PM</li>
+            <li>📌 Venue: New Block</li>
+
+            <li>📌An unexpected and thrilling event with exciting challenges and rewards</li>
           </ul>
           <button className="register-button">📝 Register Now</button>
         </div>

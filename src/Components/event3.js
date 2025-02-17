@@ -38,20 +38,31 @@ function Event1() {
 
       {/* 🎟️ Event Content */}
       <div className="event-content">
-        <img src={eventImage} alt="Event Poster" className="event-poster" />
-        <div className="event-info">
-          <h1 className="event-title">MYSTERY BUSKS BATTLE</h1>
-          <ul className="event-description">
-            <li>📌 Date: 20th February 2025</li>
-            <li>📌 Time: 10:00 AM - 5:00 PM</li>
-            <li>📌 Venue: RMK Engineering College</li>
-            <li>📌 Topics: AI, Blockchain, and Cybersecurity</li>
-            <li>📌 Special Guest: Industry Experts & Keynote Speakers</li>
-          </ul>
-          <button className="register-button">📝 Register Now</button>
-        </div>
-      </div>
+  <img src={eventImage} alt="Event Poster" className="event-poster" />
+  <div className="event-info">
+    <h1 className="event-title">💰MYSTERY BUCKS BATTLE – Bid, Win & Conquer!🎲✨</h1>
+    <ul className="event-description">
+      <h1 className="event-title" >Time: 10:30 AM - 12:00 PM</h1>
+      <h1 className="event-title" >Venue:New Block NB305</h1>
+      
+    </ul>
+    
+    {/* New Content */}
+  
+
+    <div className="event-description">
+  
+  <p>Test your strategy, luck, and teamwork in this high-stakes bidding showdown! 💵 Earn virtual bucks, outplay opponents in mystery challenges, and bid for exciting rewards in the ultimate auction. </p>
+  <h4>🔥 Ready to risk it all for glory? Register now and let the battle begin! </h4>
+</div>
+
+
+    <button className="register-button">📝 Register Now</button>
+  </div>
+</div>
+
     </div>
   );
 }
+
 export default Event1;

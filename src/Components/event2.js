@@ -41,8 +41,8 @@ function Event1() {
   <div className="event-info">
     <h1 className="event-title">Mind Maze – The Ultimate Logic Challenge!</h1>
     <ul className="event-description">
-      <h1 className="event-title" >Time: 10:00 AM - 5:00 PM</h1>
-      <h1 className="event-title" >Venue:New Block NB11</h1>
+      <h1 className="event-title" >Time: 11:00 AM - 12:30 PM</h1>
+      <h1 className="event-title" >Venue:New Block NB311</h1>
       
     </ul>
     

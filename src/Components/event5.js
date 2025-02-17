@@ -35,22 +35,39 @@ function Event1() {
         </button>
       </div>
 
-      {/* 🎟️ Event Content */}
-      <div className="event-content">
-        <img src={eventImage} alt="Event Poster" className="event-poster" />
-        <div className="event-info">
-          <h1 className="event-title">PITCH PERFECT</h1>
-          <ul className="event-description">
-            <li>📌 Date: 20th February 2025</li>
-            <li>📌 Time: 10:00 AM - 5:00 PM</li>
-            <li>📌 Venue: RMK Engineering College</li>
-            <li>📌 Topics: AI, Blockchain, and Cybersecurity</li>
-            <li>📌 Special Guest: Industry Experts & Keynote Speakers</li>
-          </ul>
-          <button className="register-button">📝 Register Now</button>
-        </div>
-      </div>
+           {/* 🎟️ Event Content */}
+           <div className="event-content">
+  <img src={eventImage} alt="Event Poster" className="event-poster" />
+  <div className="event-info">
+    <h1 className="event-title">🎤 PITCH PERFECT – The Ultimate Idea Battle!🚀</h1>
+    <ul className="event-description">
+      <h1 className="event-title" >Time: 10:00 AM - 11:30 PM</h1>
+      <h1 className="event-title" >Venue:New Block NB307</h1>
+      
+    </ul>
+    
+    {/* New Content */}
+  
+
+    <div className="event-description">
+  
+  <p>
+
+  Innovate, reinvent, and sell your vision in this high-stakes showdown! 🔥 From crafting game-changing prototypes to reviving failed products and delivering a 60-second power pitch—only the boldest thinkers will rise to the top! 
+ </p>
+  <h4>💡 Got what it takes to impress the judges? Register now and own the stage! 🎯
+
+ </h4>
+</div>
+
+
+    <button className="register-button">📝 Register Now</button>
+  </div>
+</div>
+
     </div>
   );
 }
+
 export default Event1;
+

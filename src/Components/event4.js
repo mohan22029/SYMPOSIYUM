@@ -37,20 +37,36 @@ function Event1() {
 
       {/* 🎟️ Event Content */}
       <div className="event-content">
-        <img src={eventImage} alt="Event Poster" className="event-poster" />
-        <div className="event-info">
-          <h1 className="event-title">IDEA IGNITE</h1>
-          <ul className="event-description">
-            <li>📌 Date: 20th February 2025</li>
-            <li>📌 Time: 10:00 AM - 5:00 PM</li>
-            <li>📌 Venue: RMK Engineering College</li>
-            <li>📌 Topics: AI, Blockchain, and Cybersecurity</li>
-            <li>📌 Special Guest: Industry Experts & Keynote Speakers</li>
-          </ul>
-          <button className="register-button">📝 Register Now</button>
-        </div>
-      </div>
+  <img src={eventImage} alt="Event Poster" className="event-poster" />
+  <div className="event-info">
+    <h1 className="event-title">🔥 Idea Ignite: Where Innovation Meets Expression!🔥 </h1>
+    <ul className="event-description">
+      <h1 className="event-title" >Time: 10:00 AM - 11:30 AM</h1>
+      <h1 className="event-title" >Venue:New Block NB306</h1>
+      
+    </ul>
+    
+    {/* New Content */}
+  
+
+    <div className="event-description">
+  
+  <p>
+
+Turn your ideas into impact! 🌟 Present groundbreaking concepts through posters & papers, captivate judges, and compete with the brightest minds. 🚀  
+
+ </p>
+  <h4>💡 Ready to ignite change? Register now and let your innovation shine! 🎤✨
+ </h4>
+</div>
+
+
+    <button className="register-button">📝 Register Now</button>
+  </div>
+</div>
+
     </div>
   );
 }
+
 export default Event1;

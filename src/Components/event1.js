@@ -36,21 +36,32 @@ function Event1() {
         </button>
       </div>
 
-      {/* 🎟️ Event Content */}
-      <div className="event-content">
-        <img src={eventImage} alt="Event Poster" className="event-poster" />
-        <div className="event-info">
-          <h1 className="event-title">BUG BASH</h1>
-          <ul className="event-description">
-            <li>📌 Date: 20th February 2025</li>
-            <li>📌 Time: 10:00 AM - 5:00 PM</li>
-            <li>📌 Venue: RMK Engineering College</li>
-            <li>📌 Topics: AI, Blockchain, and Cybersecurity</li>
-            <li>📌 Special Guest: Industry Experts & Keynote Speakers</li>
-          </ul>
-          <button className="register-button">📝 Register Now</button>
-        </div>
-      </div>
+         {/* 🎟️ Event Content */}
+         <div className="event-content">
+  <img src={eventImage} alt="Event Poster" className="event-poster" />
+  <div className="event-info">
+    <h1 className="event-title">BUG BASH – Debugging Challenge!</h1>
+    <ul className="event-description">
+      <h1 className="event-title" >Time: 10:30 AM - 12:00 PM</h1>
+      <h1 className="event-title" >Venue:New Block NB310</h1>
+      
+    </ul>
+    
+    {/* New Content */}
+  
+
+    <div className="event-description">
+  
+  <p>Spot errors, fix code, and prove your debugging mastery in this electrifying two-level challenge! 🛠💡 Speed through Rapid Fire Debugging, then battle buggy code in Code Revival—only the best will survive!  
+  </p>
+  <h4>💻 Ready to rise as the ultimate debugger? Register now and claim your victory! </h4>
+</div>
+
+
+    <button className="register-button">📝 Register Now</button>
+  </div>
+</div>
+
     </div>
   );
 }
