@@ -190,7 +190,7 @@ const Home = () => {
             with the pride by the department of Artificial Intelligence and Data Science
           </p>
           <div className="countdown">
-            <p><i className="fa-regular fa-calendar" style={{color: '#f39c12'}}></i> March 17, 2025:</p>
+            <p><i className="fa-regular fa-calendar" style={{color: '#f39c12'}}></i> March 17, 2025</p>
             <div className="time">
               <span>{timeLeft.days}d</span> : 
               <span>{timeLeft.hours}h</span> : 
