@@ -101,7 +101,7 @@ const Home = () => {
 
   const cardData = [
     {
-      id: '1',
+      id: '4',
       title: 'Idea Ignite',
       description: 'Spark Ideas, Present Brilliance!',
       backText: ' Idea Ignite is not just a paper presentation competition.',
@@ -115,21 +115,21 @@ const Home = () => {
       image: mindMazeImage,
     },
     {
-      id: '3',
+      id: '1',
       title: 'Bug Bash',
       description: 'Debug, Fix, Dominate!',
       backText: 'Buck Bash is an electrifying level coding challenge designed to push your problem-solving abilities to the limit',
       image: bugBashImage, // Unique image for this card
     },
     {
-      id: '4',
+      id: '5',
       title: 'Pitch Perfect',
       description: 'Innovate, Impress, Revolutionize!',
       backText: 'Every great idea starts with a spark can you turn yours into a revolution!',
       image: pitchPerfectImage,
     },
     {
-      id: '5',
+      id: '3',
       title: 'Mystery Bucks Battle (Non-Tech)',
       description: 'Compete, Earn, Bid, Win Big!',
       backText: 'An interactive event where participants will face unexpected challenges, earn virtual money, and bid for exciting mystery rewards.',
