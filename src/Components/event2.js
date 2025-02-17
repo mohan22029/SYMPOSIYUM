@@ -37,19 +37,32 @@ function Event1() {
 
       {/* 🎟️ Event Content */}
       <div className="event-content">
-        <img src={eventImage} alt="Event Poster" className="event-poster" />
-        <div className="event-info">
-          <h1 className="event-title">MIND MAZE</h1>
-          <ul className="event-description">
+  <img src={eventImage} alt="Event Poster" className="event-poster" />
+  <div className="event-info">
+    <h1 className="event-title">Mind Maze – The Ultimate Logic Challenge!</h1>
+    <ul className="event-description">
+      <h1 className="event-title" >Time: 10:00 AM - 5:00 PM</h1>
+      <h1 className="event-title" >Venue:New Block NB11</h1>
+      
+    </ul>
+    
+    {/* New Content */}
   
-            <li>📌 Time: 10:00 AM - 5:00 PM</li>
-            <li>📌 Venue: RMK Engineering College</li>
-            <li>📌 Topics: AI, Blockchain, and Cybersecurity</li>
-            <li>📌 Special Guest: Industry Experts & Keynote Speakers</li>
-          </ul>
-          <button className="register-button">📝 Register Now</button>
-        </div>
-      </div>
+
+    <div className="event-description">
+  
+  <p>A battle of wits, deception, and problem-solving! Mind Maze pushes your logical reasoning and strategic thinking to the limits through two intense rounds:</p>
+
+  <h3>Round 1: Deception Detect</h3>
+
+  <h3>Round 2: Logic Builder</h3>
+</div>
+
+
+    <button className="register-button">📝 Register Now</button>
+  </div>
+</div>
+
     </div>
   );
 }
