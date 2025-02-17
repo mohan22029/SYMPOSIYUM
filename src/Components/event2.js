@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./event1.css"; 
-import eventImage from "../Assets/event2.jpg";
+import eventImage from "../Assets/event2.png";
 import bgVideo from "../Assets/event1.mp4"; // 🎥 Add background video path
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -39,7 +39,7 @@ function Event1() {
       <div className="event-content">
   <img src={eventImage} alt="Event Poster" className="event-poster" />
   <div className="event-info">
-    <h1 className="event-title">Mind Maze – The Ultimate Logic Challenge!</h1>
+    <h1 className="event-title">🧠 MIND MAZE – The Ultimate Logic Challenge! 🔥 </h1>
     <ul className="event-description">
       <h1 className="event-title" >Time: 11:00 AM - 12:30 PM</h1>
       <h1 className="event-title" >Venue:New Block NB311</h1>
@@ -59,7 +59,9 @@ function Event1() {
 </div>
 
 
-    <button className="register-button">📝 Register Now</button>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeym79enEQ_FrmCsmOepX7hRo-MzXuk4Gs86d9_SgMYC4w6vQ/viewform?usp=sharing " target="_blank">
+  <button className="register-button">📝 Register Now</button>
+</a>
   </div>
 </div>
 

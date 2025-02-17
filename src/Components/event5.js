@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./event1.css"; 
-import eventImage from "../Assets/event1.png";
+import eventImage from "../Assets/event5.png";
 import bgVideo from "../Assets/event1.mp4"; // 🎥 Add background video path
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -61,7 +61,9 @@ function Event1() {
 </div>
 
 
-    <button className="register-button">📝 Register Now</button>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeym79enEQ_FrmCsmOepX7hRo-MzXuk4Gs86d9_SgMYC4w6vQ/viewform?usp=sharing " target="_blank">
+  <button className="register-button">📝 Register Now</button>
+</a>
   </div>
 </div>
 
