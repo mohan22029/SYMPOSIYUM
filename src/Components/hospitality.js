@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./header.css";
 import "./hospitality.css";
+//import BUS from "../Assets/bus-routres.pdf"
 
 const Hospitality = () => {
   const [showDirections, setShowDirections] = useState(false);
@@ -35,7 +36,7 @@ const Hospitality = () => {
               <li>📌 Follow the Formal Dress Code.</li>
             </ul>
             <p>Click the button below to view the detailed bus routes.</p>
-            <button className="ho-bus-btn" onClick={() => window.open("/bus-routes.pdf", "_blank")}>
+            <button className="ho-bus-btn" onClick={() => window.open("https://drive.google.com/file/d/1jtGgXYyJw16EuWEZKCsc9roRgRgvs-UF/view?usp=sharing ", "_blank")}>
               View Bus Routes (PDF)
             </button>
           </div>
