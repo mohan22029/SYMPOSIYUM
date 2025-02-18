@@ -4,6 +4,7 @@ import "./event1.css";
 import eventImage from "../Assets/event3.png";
 import bgVideo from "../Assets/event1.mp4"; // 🎥 Add background video path
 import { FaArrowLeft } from "react-icons/fa";
+import Image_Background from"./../Assets/eventplace.png"
 
 function Event1() {
  const navigate = useNavigate();
@@ -16,9 +17,17 @@ function Event1() {
   return (
     <div className="page-container">
       {/* 🎥 Background Video */}
-      <video autoPlay loop muted className="background-video">
+      <video
+       autoPlay loop
+        muted 
+        playsInline
+        preload="auto"
+        className="background-video"
+        poster={Image_Background}
+        >
         <source src={bgVideo} type="video/mp4" />
         Your browser does not support the video tag.
+      
       </video>
 
       {/* 🔥 Overlay for readability */}
