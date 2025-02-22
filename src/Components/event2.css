@@ -126,6 +126,7 @@
   letter-spacing: 2px;
   margin-bottom: 15px;
   animation: fadeIn 1s ease-in-out;
+  text-align: center;
 }
 
 /* 📜 Event Description */
@@ -137,6 +138,8 @@
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   transition: color 0.3s ease-in-out;
+  
+ 
 }
 
 .event-description:hover {
@@ -280,4 +283,34 @@
       font-size: 0.8rem;
       padding: 6px 15px;
   }
+}
+
+.cont {
+  list-style-type: none;  /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+  text-align: left; 
+   /* Ensure the text is aligned to the left */
+}
+
+.cont li {
+  display: flex;
+  align-items: center;
+  gap: 8px;  /* Space between icon and text */
+  padding: 5px 0;
+  font-size: 1rem;  /* Ensure uniform font size */
+  text-align: left;  /* Explicitly align text to the left */
+  margin-left: 10px;  /* Add margin if needed */
+}
+
+.cont li::before {
+  content: "•"; /* Custom bullet */
+  color: rgb(235, 216, 16); /* Match your theme */
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 15px;
+}
+
+.tt{
+  color: aqua;
 }

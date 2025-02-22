@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./event1.css"; 
+import "./event2.css"; 
 import eventImage from "../Assets/event2.png";
 import bgVideo from "../Assets/event1.mp4"; // 🎥 Add background video path
 import { FaArrowLeft } from "react-icons/fa";
@@ -48,10 +48,10 @@ function Event1() {
       <div className="event-content">
   <img src={eventImage} alt="Event Poster" className="event-poster" />
   <div className="event-info">
-    <h1 className="event-title">🧠 MIND MAZE – The Ultimate Logic Challenge! 🔥 </h1>
+    <h1 className="event-title">MIND MAZE – The Ultimate Logic Challenge! 🔥 </h1>
     <ul className="event-description">
-      <h1 className="event-title" >Time: 11:00 AM - 12:30 PM</h1>
-      <h1 className="event-title" >Venue:New Block NB311</h1>
+      <h3 className="event-title" >Time: 11:00 AM - 12:30 PM</h3>
+      <h3 className="event-title" >Venue:New Block NB311</h3>
       
     </ul>
     
@@ -63,8 +63,16 @@ function Event1() {
   <p>A battle of wits, deception, and problem-solving! Mind Maze pushes your logical reasoning and strategic thinking to the limits through two intense rounds:</p>
 
   <h3>Round 1: Deception Detect</h3>
-
+  
   <h3>Round 2: Logic Builder</h3>
+  
+<ul className="cont">
+<h2 className="tt">Participation Requirements:</h2>
+  <li>📊 Basic Knowledge in Data Visualization</li>
+  <li>💻 Laptop Required        </li>
+  <li>🧠 Basic Understanding of Computational Problems</li>
+</ul>
+
 </div>
 
 
