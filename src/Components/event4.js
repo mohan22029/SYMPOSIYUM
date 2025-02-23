@@ -70,7 +70,7 @@ Turn your ideas into impact! 🌟 Present groundbreaking concepts through poster
 </div>
 
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeym79enEQ_FrmCsmOepX7hRo-MzXuk4Gs86d9_SgMYC4w6vQ/viewform?usp=sharing " target="_blank">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSclXFvzS7p98D6iZ-jGIjyeI64dEqbBvruOa40G0ryCQgPRPA/viewform?usp=dialog " target="_blank">
   <button className="register-button">📝 Register Now</button>
 </a>
   </div>

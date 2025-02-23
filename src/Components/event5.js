@@ -70,7 +70,7 @@ function Event1() {
 </div>
 
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeym79enEQ_FrmCsmOepX7hRo-MzXuk4Gs86d9_SgMYC4w6vQ/viewform?usp=sharing " target="_blank">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfEWOZFbTmbX_AqwtY77tSDnP0sn7ANM5H996EFXAlP3qF01A/viewform?usp=dialog " target="_blank">
   <button className="register-button">📝 Register Now</button>
 </a>
   </div>

@@ -57,9 +57,9 @@ function Event1() {
 
             <li>📌An unexpected and thrilling event with exciting challenges and rewards</li>
           </ul>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeym79enEQ_FrmCsmOepX7hRo-MzXuk4Gs86d9_SgMYC4w6vQ/viewform?usp=sharing " target="_blank">
-  <button className="register-button">📝 Register Now</button>
-</a>
+          
+  <button className="register-button">📝 On-Spot Registration</button>
+
         </div>
       </div>
     </div>
