@@ -210,25 +210,64 @@ const Home = () => {
               <span>{timeLeft.seconds}s</span>
             </div>
             <div>
-<button class="animated-button" onClick={() => document.getElementById('events').scrollIntoView({ behavior: 'smooth' })}>
-  <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-    <path
-      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-    ></path>
-  </svg>
-  <span class="text">EXPLORE NOW</span>
-  <span class="circle"></span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-    <path
-      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-    ></path>
-  </svg>
-</button>
+            <button class="animated-button" onClick={() => document.getElementById('events').scrollIntoView({ behavior: 'smooth' })}>
+              <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+              <span class="text">EXPLORE NOW</span>
+              <span class="circle"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+            </button>
 
             </div>
           </div>
         
 
+      </section>
+
+
+
+
+      <section id="events">
+        <div className="events-section">
+          <h2 className="events-heading">Featured Events</h2>
+          <div className="events-container">
+            <button className="scroll-btn scroll-left" onClick={scrollLeft}>
+              <i className="fas fa-chevron-left"></i>
+            </button>
+            <div className="card-container" ref={eventsContainerRef}>
+              {cardData.map((card, index) => (
+                <div 
+                className="card"
+                 key={index}
+                 onClick={() => navigate(`/event/${card.id}`)}>
+                  <div className="card-inner">
+                    {/* Front Side */}
+                    <div className="card-front">
+                      <img src={card.image} alt={card.title} />
+                      <div className="card-title">{card.title}</div>
+                      {/* <div className="card-description">{card.description}</div> */}
+                    </div>
+                    {/* Back Side */}
+                    <div className="card-back">
+                      <p>{card.backText}</p>
+                      <a href="#next-section" className="card-link">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button className="scroll-btn scroll-right" onClick={scrollRight}>
+              <i className="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </section>
 
       <section id="vis&mis">
@@ -260,44 +299,6 @@ const Home = () => {
         </div>
       </section>
 
-
-
-
-      <section id="events">
-        <div className="events-section">
-          <h2 className="events-heading">Featured Events</h2>
-          <div className="events-container">
-            <button className="scroll-btn scroll-left" onClick={scrollLeft}>
-              <i className="fas fa-chevron-left"></i>
-            </button>
-            <div className="card-container" ref={eventsContainerRef}>
-              {cardData.map((card, index) => (
-                <div 
-                className="card"
-                 key={index}
-                 onClick={() => navigate(`/event/${card.id}`)}>
-                  <div className="card-inner">
-                    {/* Front Side */}
-                    <div className="card-front">
-                      <img src={card.image} alt={card.title} />
-                      <div className="card-title">{card.title}</div>
-                      <div className="card-description">{card.description}</div>
-                    </div>
-                    {/* Back Side */}
-                    <div className="card-back">
-                      <p>{card.backText}</p>
-                      <a href="#next-section" className="card-link">Learn More</a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <button className="scroll-btn scroll-right" onClick={scrollRight}>
-              <i className="fas fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-      </section>
 
       <section id="r_r">
         <div className="r_r-container">

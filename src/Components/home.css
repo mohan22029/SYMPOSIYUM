@@ -83,7 +83,7 @@ section.visible {
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better readability */
-  padding: 3rem;
+  padding: 3rem 3rem 0rem 3rem;
   overflow: hidden;
   top: 20px;
 }
@@ -391,6 +391,9 @@ section.visible {
 
 
 
+.card:hover {
+  transform: translateY(-5px);
+}
 
 
 
@@ -711,14 +714,14 @@ html {
 }
 
 
-.card:hover {
+/* .card:hover {
   transform: scale(1.05);
   z-index: 2;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 .card:hover::before {
   opacity: 1;
-}
+} */
 
 .card-inner {
   transition: transform 0.6s;
@@ -738,9 +741,9 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-front {
-  background: linear-gradient(to bottom, #06a78c, #f8f9fa);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+/* .card-front {
+  background: linear-gradient(to bottom, #003cff87, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.1); 00a2ff
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -750,25 +753,17 @@ html {
 .card-front img {
   width: 100%;
   height: 180px;
+  height: 100%;
   object-fit: cover;
 }
 
-.card-back {
-  background: linear-gradient(145deg, #1f387e, #2a4dad);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  transform: rotateY(180deg);
-}
 
 .card-title {
   font-size: 24px;
   font-weight: bold;
   margin: 15px 0 10px;
   color: #1f387e;
+  color: #000;
   font-family: 'Libre Baskerville', serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -782,6 +777,96 @@ html {
   font-style: italic;
   line-height: 1.4;
   padding: 0 15px;
+} */
+
+.card-front {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.card-front {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Ensure the image stays in place and doesn’t zoom */
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: none; /* Prevents zooming */
+}
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0.5) 85%, rgba(0, 0, 0, 0) 100%);
+  transition: background 0.3s ease-in-out;
+}
+
+/* New Hover Effects */
+.card-front:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0px 10px 15px rgba(125, 125, 125, 0.5);
+}
+
+/* Subtle outer shadow glow effect */
+.card-front::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 30px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 80%);
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.card-front:hover::after {
+  opacity: 1;
+}
+
+
+
+.card-back {
+  background: linear-gradient(145deg, #1f387e, #2a4dad);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  transform: rotateY(180deg);
 }
 
 .card-back p {
@@ -1155,9 +1240,6 @@ html {
 }
 
 /* Add hover effect for cards */
-.card:hover {
-  transform: translateY(-5px);
-}
 
 /* Home Section Responsive Styles */
 @media screen and (max-width: 1200px) {
